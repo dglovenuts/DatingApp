@@ -26,10 +26,6 @@ export class NavComponent implements OnInit {
     this.accountService.login(this.model).subscribe(response => {
       this.router.navigateByUrl('/members');
     // tslint:disable-next-line:no-shadowed-variable
-    }, error => {
-      console.log(error);
-      this.toastr.error(error.error);
-    // tslint:disable-next-line:semicolon
     })
   }
 
