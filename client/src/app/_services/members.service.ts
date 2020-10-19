@@ -42,6 +42,17 @@ export class MembersService {
         const index = this.members.indexOf(member);
         this.members[index] = member;
       })
+    // tslint:disable-next-line:semicolon
     )
+  }
+
+  // tslint:disable-next-line:typedef
+  setMainPhoto(photoId: number) {
+    return this.http.put(this.baseUrl + 'users/set-main-photo/' + photoId, {});
+  }
+
+  // tslint:disable-next-line:typedef
+  deletePhoto(photoId: number) {
+    return this.http.delete(this.baseUrl + 'users/delete-photo/' + photoId);
   }
 }
